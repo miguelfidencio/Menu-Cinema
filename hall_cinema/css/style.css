@@ -1,0 +1,320 @@
+
+/* CONFIGURAÇÕES GERAIS */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background:
+        radial-gradient(
+            ellipse at center,
+            #292020 0%,
+            #100d0d 55%,
+            #050505 100%
+        );
+
+    color: white;
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+}
+
+
+/* CABEÇALHO */
+
+.header {
+    width: 100%;
+    padding: 25px 8%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background: rgba(0, 0, 0, 0.75);
+    border-bottom: 1px solid #542020;
+}
+
+.logo a {
+    color: #d6a64b;
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #d6a64b;
+}
+
+
+/* PÁGINA INICIAL */
+
+.cinema {
+    min-height: 85vh;
+    padding: 60px 5% 100px;
+}
+
+.hero {
+    text-align: center;
+    margin-bottom: 65px;
+}
+
+.hero h1 {
+    font-size: 50px;
+    letter-spacing: 8px;
+    color: #d6a64b;
+
+    text-shadow: 0 0 20px #8b4d20;
+}
+
+.hero p {
+    margin-top: 15px;
+    color: #c4baba;
+    font-size: 17px;
+    letter-spacing: 2px;
+}
+
+
+/* CARTAZES */
+
+.cartaz-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 45px;
+    flex-wrap: wrap;
+}
+
+.cartaz {
+    position: relative;
+
+    width: 280px;
+    height: 420px;
+
+    overflow: hidden;
+    border-radius: 8px;
+
+    background: #1b1515;
+
+    text-decoration: none;
+    color: white;
+
+    box-shadow:
+        0 0 20px rgba(160, 40, 20, 0.2);
+
+    transition: 0.4s;
+}
+
+.cartaz:hover {
+    transform: scale(1.07);
+    box-shadow:
+        0 0 35px rgba(190, 55, 30, 0.6);
+}
+
+.cartaz img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.cartaz-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    padding: 25px 15px;
+
+    background: linear-gradient(
+        transparent,
+        rgba(0, 0, 0, 0.95)
+    );
+}
+
+.cartaz-info h2 {
+    font-size: 19px;
+    margin-bottom: 10px;
+}
+
+.cartaz-info p {
+    font-size: 13px;
+    color: #ddd;
+    margin-bottom: 15px;
+}
+
+.cartaz-info span {
+    color: #d6a64b;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+
+/* PÁGINAS DOS FILMES */
+
+.pagina-filme {
+    min-height: 85vh;
+    padding: 50px 8%;
+}
+
+.voltar {
+    display: inline-block;
+    margin-bottom: 40px;
+
+    color: #d6a64b;
+    text-decoration: none;
+
+    font-size: 14px;
+    letter-spacing: 2px;
+}
+
+.voltar:hover {
+    color: white;
+}
+
+.detalhes-filme {
+    display: flex;
+    align-items: flex-start;
+    gap: 60px;
+}
+
+.filme-imagem {
+    flex: 1;
+    min-width: 300px;
+}
+
+.filme-imagem img {
+    width: 100%;
+    max-width: 500px;
+
+    display: block;
+    border-radius: 8px;
+
+    box-shadow:
+        0 0 30px rgba(150, 40, 20, 0.3);
+}
+
+.filme-texto {
+    flex: 1.3;
+}
+
+.filme-texto h1 {
+    color: #d6a64b;
+    font-size: 38px;
+    margin-bottom: 15px;
+}
+
+.categoria {
+    color: #aaa;
+    font-size: 13px;
+    letter-spacing: 2px;
+    margin-bottom: 40px;
+}
+
+.filme-texto h2 {
+    color: #d6a64b;
+    font-size: 21px;
+    margin: 25px 0 12px;
+}
+
+.filme-texto p {
+    color: #ddd;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+
+/* BOTÃO TRAILER */
+
+.botao-filme {
+    display: inline-block;
+    margin-top: 35px;
+
+    padding: 15px 30px;
+
+    background: #8c2020;
+    color: white;
+
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 2px;
+
+    border-radius: 4px;
+    transition: 0.3s;
+}
+
+.botao-filme:hover {
+    background: #c12d2d;
+    box-shadow: 0 0 20px #8c2020;
+}
+
+
+/* RODAPÉ */
+
+.footer {
+    background: #050505;
+    border-top: 1px solid #542020;
+
+    padding: 30px;
+    text-align: center;
+
+    color: #888;
+    font-size: 13px;
+    line-height: 2;
+}
+
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 800px) {
+
+    .header {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    nav {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .detalhes-filme {
+        flex-direction: column;
+    }
+
+    .filme-imagem {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .filme-imagem img {
+        max-width: 100%;
+    }
+
+    .filme-texto h1 {
+        font-size: 30px;
+    }
+
+    .cartaz-container {
+        gap: 35px;
+    }
+}
